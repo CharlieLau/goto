@@ -5,8 +5,8 @@ const loaderUtils = require('loader-utils');
 const path = require('path');
 let compiler = require('vue-template-compiler');
 
-var Linter = require('eslint').Linter;
-var linter = new Linter();
+// var Linter = require('eslint').Linter;
+// var linter = new Linter();
 const port = require('./lib/port');
 // const rules = require(process.cwd() + '/.eslintrc');
 

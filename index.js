@@ -8,8 +8,7 @@ let compiler = require('vue-template-compiler');
 var Linter = require('eslint').Linter;
 var linter = new Linter();
 const port = require('./lib/port');
-
-const rules = require(process.cwd() + '/.eslintrc');
+// const rules = require(process.cwd() + '/.eslintrc');
 
 module.exports = async function (source) {
     const {
@@ -76,8 +75,8 @@ module.exports = async function (source) {
             }
         }
         let result = source.replace(/(<script.*>)([\s\S]*)<\/script>/, (mathes, $1) => {
-            let fix = linter.verifyAndFix(replaceStr, rules);
-            return `${$1}${fix.output}</script>`;
+            // let fix = linter.verifyAndFix(replaceStr, rules);
+            return `${$1}${replaceStr}</script>`;
         });
         source = result;
     }

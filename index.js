@@ -8,6 +8,7 @@ let compiler = require('vue-template-compiler');
 var Linter = require('eslint').Linter;
 var linter = new Linter();
 const port = require('./lib/port');
+
 const rules = require(process.cwd() + '/.eslintrc');
 
 module.exports = async function (source) {

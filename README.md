@@ -40,6 +40,6 @@ webpack.dev.config.js:
   ...
 
 ```
-
+then open browser   and  press `Alt`+'click' 
 
 ## Other
